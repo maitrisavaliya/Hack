@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 20% 98%;
+    --foreground: 283 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 283 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 283 10% 20%;
+
+    --primary: 282 59% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 339 60% 65%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 280 20% 96%;
+    --muted-foreground: 283 10% 45%;
+
+    --accent: 339 70% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 283 10% 90%;
+    --input: 283 10% 90%;
+    --ring: 282 59% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 280 20% 98%;
+    --sidebar-foreground: 283 10% 30%;
+    --sidebar-primary: 282 59% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 339 70% 90%;
+    --sidebar-accent-foreground: 283 10% 30%;
+    --sidebar-border: 280 10% 90%;
+    --sidebar-ring: 282 59% 60%;
+  }
+
+  .dark {
+    --background: 283 25% 10%;
+    --foreground: 280 10% 95%;
+
+    --card: 283 25% 12%;
+    --card-foreground: 280 10% 95%;
+
+    --popover: 283 25% 12%;
+    --popover-foreground: 280 10% 95%;
+
+    --primary: 282 59% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 339 50% 55%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 283 25% 20%;
+    --muted-foreground: 280 10% 70%;
+
+    --accent: 339 50% 30%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 283 25% 25%;
+    --input: 283 25% 25%;
+    --ring: 282 59% 60%;
+    
+    --sidebar-background: 283 25% 12%;
+    --sidebar-foreground: 280 10% 95%;
+    --sidebar-primary: 282 59% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 339 50% 30%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 283 25% 25%;
+    --sidebar-ring: 282 59% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-nurture-500 to-mom-500;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-nurture-100 to-mom-100;
+}
+
+.nurture-card {
+  @apply bg-white rounded-xl border border-nurture-100 shadow-sm hover:shadow-md transition-all;
+}
+
+.nurture-button {
+  @apply bg-gradient-to-r from-nurture-500 to-mom-500 text-white font-medium py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all;
+}
